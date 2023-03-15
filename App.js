@@ -1,26 +1,13 @@
+import { NavigationContainer } from '@react-navigation/native';
 import { StatusBar } from 'expo-status-bar';
 import { Button, StyleSheet, Text, TextInput, View } from 'react-native';
+import { TabRoutes } from './routes/tab.routes';
 
 export default function App() {
     return (
-        <View style={styles.container}>
-            <StatusBar style="light" />
-            <Text style={styles.header}>Sign up</Text>
-            <Text>Sign up with one of following options</Text>
-
-            <Text style={styles.label}>Name</Text>
-            <TextInput style={styles.input} placeholder='Enter you name' />
-
-            <Text style={styles.label}>Email</Text>
-            <TextInput style={styles.input} placeholder='Enter you email' />
-
-            <Text style={styles.label}>Password</Text>
-            <TextInput style={styles.input} placeholder='Enter you password' />
-      
-            <Button title='Create Account' />
-
-            <Text>Already have an account? Login</Text>
-        </View>
+        <NavigationContainer>
+            <TabRoutes />
+        </NavigationContainer>
     );
 }
 
